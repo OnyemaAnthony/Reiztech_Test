@@ -1,4 +1,4 @@
-import "./App.css"
+import '../App';
 
 export const NavBar = ({setsortBy, page}: any) => {
     return (
