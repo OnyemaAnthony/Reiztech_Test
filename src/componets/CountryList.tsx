@@ -53,7 +53,6 @@ export const CountryList = ({sortBy}: any) => {
   }
   else if (sortBy === "ascending"){
    const countryOrder = [...countryListData.sort((a , b ) => a.name.localeCompare(b.name))];
-      console.log('hello');
     setCountryList(countryOrder)
   }
   else if (sortBy === "lithunia"){
@@ -69,8 +68,6 @@ export const CountryList = ({sortBy}: any) => {
 }
 
 Order()
-
-
     }, [countryListData, sortBy])
     return (
         <div   className="list-container">
