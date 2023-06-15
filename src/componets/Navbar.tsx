@@ -1,6 +1,6 @@
 import '../App';
 
-export const NavBar = ({setsortBy, page}: any) => {
+export const NavBar = ({setsortBy}: any) => {
     return (
         <div className="nav-container">
           <div className="nav-flex">
@@ -11,12 +11,6 @@ export const NavBar = ({setsortBy, page}: any) => {
           </div>
 
           <div className="nav-flex">
-          <button> next</button>
-          
-          {
-             (<button> prev</button>)
-          }
-          
           </div>
         </div>
     )

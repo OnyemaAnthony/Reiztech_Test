@@ -29,9 +29,8 @@ export const CountryList = ({sortBy}: any) => {
     const getCountryData = useCallback(
       async () => {
         try {
-            const params = 'https://restcountries.com/v2/all?fields=name,region,area'
-          const countryData = await axiosRequest(params)  
-          console.log("countryData", countryData)
+            const endpoint = 'https://restcountries.com/v2/all?fields=name,region,area'
+          const countryData = await axiosRequest(endpoint)
           setCountryListData(countryData.data)
     
         } catch (error) {
@@ -73,10 +72,6 @@ Order()
 
 
     }, [countryListData, sortBy])
-    
-    
-    
-
     return (
         <div   className="list-container">
             {

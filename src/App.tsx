@@ -6,11 +6,10 @@ import { NavBar } from './componets/Navbar';
 
 function App() {
   const [sortBy, setsortBy] = useState("assending")
-  const [page, setPage] = useState(0)
   return (
     <div className="App">
       <Header />
-    <NavBar setsortBy={setsortBy} page={page} />
+    <NavBar setsortBy={setsortBy} />
     <CountryList sortBy={sortBy} />
     </div>
   );
