@@ -47,13 +47,13 @@ export const CountryList = ({sortBy}: any) => {
 
     useEffect(() => {
         const Order = () => {
-    
   if (sortBy === "descending"){
      const countryOrder = [...countryListData.sort((a , b) => b.name.localeCompare(a.name))];
     setCountryList(countryOrder)
   }
-  else if (sortBy === "assending"){
+  else if (sortBy === "ascending"){
    const countryOrder = [...countryListData.sort((a , b ) => a.name.localeCompare(b.name))];
+      console.log('hello');
     setCountryList(countryOrder)
   }
   else if (sortBy === "lithunia"){

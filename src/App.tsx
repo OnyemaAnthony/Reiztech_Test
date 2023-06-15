@@ -5,7 +5,7 @@ import { Header } from './componets/Header';
 import { NavBar } from './componets/Navbar';
 
 function App() {
-  const [sortBy, setsortBy] = useState("assending")
+  const [sortBy, setsortBy] = useState("ascending")
   return (
     <div className="App">
       <Header />
