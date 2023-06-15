@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { CountryList } from './CountryList';
+import { Header } from './Header';
+import { NavBar } from './Navbar';
 
 function App() {
+  const [sortBy, setsortBy] = useState("assending")
+  const [page, setPage] = useState(0)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* header */}
+      <Header />
+    {/* navbar */}
+    <NavBar setsortBy={setsortBy} page={page} />
+    {/* list renderrer */}
+    <CountryList sortBy={sortBy} />
     </div>
   );
 }
